@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Desktop First*/
+
+h1 {
+    color: blue;
+}
+
+img {
+    width: 200px;
+}
+/* Breakpoint */
+
+/* Tablet < 992px(768px - 992px) */
+@media screen and (max-width: 991px) {
+    h1 {
+        color: rgb(255, 0, 0);
+    }
+
+    img {
+        display: none;
+    }
+}
+
+/* Mobile < 768px(0px - 768px) */
+@media screen and (max-width: 767px) {
+    h1 {
+        background-color: rgb(236, 0, 146);
+        color: aliceblue;
+    }
+    
+    img{
+        display: block;
+    }
+        
+}
