@@ -12,10 +12,9 @@
 }
 
 body {
-    background-color: #72c3bd;
-    background-image: linear-gradient(to right , #18a2c9, #72c3bd);
+    background-image: linear-gradient(to right bottom, #18a2c9, #72c3bd);
     background-repeat: no-repeat;
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
 }
 
@@ -34,7 +33,6 @@ body {
 
 .header {
     padding: 10px;
-    /*height: 80px;*/
 }
 
 .header__logo {
@@ -44,6 +42,7 @@ body {
 .header__text {
     font-family: 'Courier New', Courier, monospace;
     color: white;
+    text-align: center;
 }
 
 .header__title {
@@ -64,7 +63,6 @@ body {
     display: flex;
     align-items: center;
     margin-top: 10px;
-    
 }
 
 .contact-form__col-b {
@@ -97,9 +95,15 @@ body {
 }
 
 .contact-form__input:focus{
-    border: 1px solid #aff0f5;
+    border: 1px solid white;
     color: white;
     background-color: #72c3bd;
+}
+
+.contact-form__col-a--endereco{
+    width: 10%;
+    display: flex;
+    margin-top: 22px;
 }
 
 .contact-form__input--metade {
@@ -115,6 +119,12 @@ body {
 .contact-form__input--tamanho3 {
     width: 100%;
     height: 150px;
+    resize: none;
+}
+
+.contact-form__input--tres-metades3{
+    width: 35%;
+    height: 35px;
 }
 
 .contact-form__input--tres-metades {
@@ -135,62 +145,85 @@ body {
 .contact-button{
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 45px;
-    padding: 2% 5% 4% 8%;
+    justify-content: end;
+    gap: 40px; 
 }
 
-
-.contact-form__button{
-    width: 450px;
+.contact-button__cadastro{
+    width: 400px;
     height: 45px;
     color: white;
-    background-color: #72c3bd;
-    transition: backgroun-color 0.4s;
+    background-color: transparent;
     border: white solid 1px;
     border-radius: 3px;
-    cursor: pointer
 }
 
-.contact-form__button:hover{
-    background-color: #4e7f83;
+.contact-button__limpar{
+    width: 400px;
+    height: 45px;
+    color: white;
+    background-color: transparent;
+    border: white solid 1px;
+    border-radius: 3px;
 }
 
 /*Tablet BreakPoint*/
 @media screen and (max-width: 991px) {
-    .container {
-     max-width: 750px;;
+    .container{
+        max-width: 740px;
     }
-    .contact-form__linha{
-        align-items: center;
-        justify-content: center;
+
+    .contact-form__label{
+        font-size: 80%;
     }
-    .contact-form__col-a{
-        display: block;
+    .contact-form{
+        padding: 18px 30px 10px 3px;
     }
+
 
 }
 
 /*Mobile BreakPoint*/
 @media screen and (max-width: 767px) {
-    .contact-form__col-a{
+
+    .contact-form__label{
         display: none;
     }
-    .contact-form__linha
-    {
-     display: flex;
-     justify-content: center;
-    }
-    .contact-form__col-b{
-        display: block;
+
+    .contact-form__input{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 10px;
     }
 
-    .contact-form__input--metade,
-    .contact-form__input--tamanho,
-    .contact-form__input--tamanho3,
-    .contact-form__input--tres-metades,
-    .contact-form__input--metade2,
-    .contact-form__input--tres-metades2{
-        width: 100%;
+    .contact-form__linha{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-form__col-b{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact-button{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1px;
+    }
+
+    .contact-button__cadastro{
+        width: 90%;
+    }
+
+    .contact-button__limpar{
+        width: 90%;
     }
 }
