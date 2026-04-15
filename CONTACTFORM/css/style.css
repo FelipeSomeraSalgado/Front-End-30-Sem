@@ -137,6 +137,7 @@ body {
     align-items: center;
     justify-content: center;
     gap: 45px;
+    padding: 2% 5% 4% 8%;
 }
 
 
@@ -152,14 +153,22 @@ body {
 }
 
 .contact-form__button:hover{
-    background-color: #aff0f5;
+    background-color: #4e7f83;
 }
 
 /*Tablet BreakPoint*/
 @media screen and (max-width: 991px) {
-    .header__title, .header__text{
-     text-align: center;
+    .container {
+     max-width: 750px;;
     }
+    .contact-form__linha{
+        align-items: center;
+        justify-content: center;
+    }
+    .contact-form__col-a{
+        display: block;
+    }
+
 }
 
 /*Mobile BreakPoint*/
@@ -171,6 +180,9 @@ body {
     {
      display: flex;
      justify-content: center;
+    }
+    .contact-form__col-b{
+        display: block;
     }
 
     .contact-form__input--metade,
