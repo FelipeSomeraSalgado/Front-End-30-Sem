@@ -12,111 +12,72 @@
 }
 
 body {
-    /*background-image: linear-gradient(to right, #18a2c9, #1dd1c5);*/
-    background-image: linear-gradient(to right bottom, #18a2c9, #72c3bd);
+    background-color: #72c3bd;
+    background-image: linear-gradient(to right , #18a2c9, #72c3bd);
     background-repeat: no-repeat;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
 }
- 
-/* Desktop First */
-.container{
+
+.container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    /*border: 1px solid white;*/
 }
 
-.container--flex-colum{
+.container--flex-column {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-
 .header {
-    padding: 10px 0;
+    padding: 10px;
     /*height: 80px;*/
-   /*border: 1px solid salmon;*/
-
 }
 
-/*.header__logo{
+.header__logo {
     width: 100px;
-}*/
-
-.header__title{
-    font-family: Architech;
-    color: rgb(222, 210, 124);
 }
 
-.header__text{
+.header__text {
     font-family: 'Courier New', Courier, monospace;
     color: white;
 }
 
-/* Formulario de contato*/
+.header__title {
+    font-family: architech;
+    color: #DED27C;
+}
+
 .contact-form {
-    padding: 20px 0;
-    /*border: 1px solid rgb(0, 0, 0);*/
+    padding: 20px;
 }
 
 .contact-form__linha {
     display: flex;
-    /*border: 1px solid brown;*/
-}
-
-.contact-form__col-a, .contact-form__col-b{
-    /*border: 1px solid burlywood;*//
 }
 
 .contact-form__col-a {
     width: 10%;
     display: flex;
     align-items: center;
+    margin-top: 10px;
+    
 }
 
-.contact-form__col-b{
+.contact-form__col-b {
+    width: 90%;
     display: flex;
     justify-content: space-between;
+}
+
+.contact-form__col-c {
     width: 90%;
-}
-
-.contact-form__input {
-    padding: 5px 10px;
-    color: #18a2c9;
-    border: none;
-    border-radius: 3px;
-    outline: none;
-
-    transition: Background-color 0.4s, color 0.4s, border 0.4s;
-}
-
-.contact-form__input:focus{
-    background-color: #72c3bd;
-    color: white;
-    border: 1px solid white;
-}
-
-.contact-form__input--quarto{
-    width: 25%;
-    height: 35px;
-}
-
-.contact-form__input--terco{
-     width: 33.3%;
-    height: 35px;
-}
-
-.contact-form__input--metade {
-    width: 49%;
-    height: 35px;
-}
-
-.contact-form__input--inteiro {
-    width: 100%;
-    height: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .contact-form__label{
@@ -125,12 +86,99 @@ body {
     font-weight: 600;
 }
 
-/* Breakpoint - Tablets*/
-@media screen and (max-width: 991px) {
-    
+.contact-form__input{
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    padding: 5px 10px;
+    color: #18a2c9;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+    margin-top: 15px;
 }
 
-/* Breakpoint - smartphones */
+.contact-form__input:focus{
+    border: 1px solid #aff0f5;
+    color: white;
+    background-color: #72c3bd;
+}
+
+.contact-form__input--metade {
+    width: 49%;
+    height: 35px;
+}
+
+.contact-form__input--tamanho {
+    width: 100%;
+    height: 35px;
+}
+
+.contact-form__input--tamanho3 {
+    width: 100%;
+    height: 150px;
+}
+
+.contact-form__input--tres-metades {
+    width: 30%;
+    height: 35px;
+}
+
+.contact-form__input--metade2 {
+    width: 40%;
+    height: 35px;
+}
+
+.contact-form__input--tres-metades2 {
+    width: 29%;
+    height: 35px;
+}
+
+.contact-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+}
+
+
+.contact-form__button{
+    width: 450px;
+    height: 45px;
+    color: white;
+    background-color: #72c3bd;
+    transition: backgroun-color 0.4s;
+    border: white solid 1px;
+    border-radius: 3px;
+    cursor: pointer
+}
+
+.contact-form__button:hover{
+    background-color: #aff0f5;
+}
+
+/*Tablet BreakPoint*/
+@media screen and (max-width: 991px) {
+    .header__title, .header__text{
+     text-align: center;
+    }
+}
+
+/*Mobile BreakPoint*/
 @media screen and (max-width: 767px) {
-    
+    .contact-form__col-a{
+        display: none;
+    }
+    .contact-form__linha
+    {
+     display: flex;
+     justify-content: center;
+    }
+
+    .contact-form__input--metade,
+    .contact-form__input--tamanho,
+    .contact-form__input--tamanho3,
+    .contact-form__input--tres-metades,
+    .contact-form__input--metade2,
+    .contact-form__input--tres-metades2{
+        width: 100%;
+    }
 }
