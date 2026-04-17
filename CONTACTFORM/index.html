@@ -76,7 +76,7 @@
 
                     <div class="contact-form__col-c">
                         <input class="contact-form__input contact-form__input--tres-metades2" name="cep" id="Cep"
-                            placeholder="CEP: 00000-000" type="text">
+                            placeholder="CEP: 00000-000" type="text" onblur="buscarEndereco(this.value)">
                         <input class="contact-form__input contact-form__input--metade2" name="endereco" id="endereco"
                             placeholder="Rua Lá de Casa" type="text">
                         <input class="contact-form__input contact-form__input--tres-metades2" name="numeroCasa"
@@ -109,7 +109,7 @@
 
                 <article class="contact-button">
                     <button class="contact-button__cadastro contact-form__input" type="button" id="cadastrar"
-                        name="cadastrar" onclick="minhaFuncao();">Cadastrar</button>
+                        name="cadastrar" onclick="validarFormulario();">Cadastrar</button>
                     <button class="contact-button__limpar contact-form__input" type="reset" id="limpar"
                         name="limpar">Limpar</button>
                 </article>
@@ -119,127 +119,7 @@
         </div>
         <!--colocar javascript antes de fechar o body do html-->
     </main>
-    <script>
-        function minhaFuncao() {
-            let nome = document.getElementById("nome").value.trim();//pega o valor do campo com id nome
-            let sobrenome = document.getElementById("sobrenome").value.trim();
-            let email = document.getElementById("email").value.trim();
-            let digito = document.getElementById("digito").value;
-            let ddd = document.getElementById("DDD").value;
-            let telefone = document.getElementById("telefone").value;
-            let cep = document.getElementById("Cep").value;
-            let endereco = document.getElementById("endereco").value;
-            let numeroCasa = document.getElementById("numeroCasa").value;
-            let local = document.getElementById("local").value;
-            let bairro = document.getElementById("bairro").value;
-            let cidade = document.getElementById("cidade").value;
-            let estado = document.getElementById("estado").value;
-            let anotacoes = document.getElementById("anotacoes").value;
-
-            if (nome.length == 0) { // se o nome estiver vazio
-                formError("nome")
-            } else { // se não estiver vazio
-                reiniciaBorda("nome")
-            }
-
-            if (sobrenome.length == 0) { // se o nome estiver vazio
-                formError("sobrenome")
-            } else { // se não estiver vazio
-                reiniciaBorda("sobrenome")
-            }
-
-            if (email.length == 0) { // se o nome estiver vazio
-                formError("email")
-            } else { // se não estiver vazio
-                reiniciaBorda("email")
-            }
-
-            if (digito.length == 0) { // se o nome estiver vazio
-                formError("digito")
-            } else { // se não estiver vazio
-                reiniciaBorda("digito")
-            }
-
-            if (ddd.length == 0) { // se o nome estiver vazio
-                formError("DDD")
-            } else { // se não estiver vazio
-                reiniciaBorda("DDD")
-            }
-
-            if (telefone.length == 0) { // se o nome estiver vazio
-                formError("telefone")
-            } else { // se não estiver vazio
-                reiniciaBorda("telefone")
-            }
-
-            if (cep.length == 0) { // se o nome estiver vazio
-                formError("Cep")
-            } else { // se não estiver vazio
-                reiniciaBorda("Cep")
-            }
-
-            if (endereco.length == 0) { // se o nome estiver vazio
-                formError("endereco")
-            } else { // se não estiver vazio
-                reiniciaBorda("endereco")
-            }
-
-            if (numeroCasa.length == 0) { // se o nome estiver vazio
-                formError("numeroCasa")
-            } else { // se não estiver vazio
-                reiniciaBorda("numeroCasa")
-            }
-
-            if (local.length == 0) { // se o nome estiver vazio
-                formError("local")
-            } else { // se não estiver vazio
-                reiniciaBorda("local")
-            }
-
-            if (bairro.length == 0) { // se o nome estiver vazio
-                formError("bairro")
-            } else { // se não estiver vazio
-                reiniciaBorda("bairro")
-            }
-            if (cidade.length == 0) { // se o nome estiver vazio
-                formError("cidade")
-            } else { // se não estiver vazio
-                reiniciaBorda("cidade")
-            }
-            if (estado.length == 0) { // se o nome estiver vazio
-                formError("estado")
-            } else { // se não estiver vazio
-                reiniciaBorda("estado")
-            }
-            if (anotacoes.length == 0) { // se o nome estiver vazio
-                formError("anotacoes")
-            } else { // se não estiver vazio
-                reiniciaBorda("anotacoes")
-            }
-
-
-        }//fim da função
-
-
-        //função que pinta a borda do campo que falta preencher
-        function formError(fildId) {
-            document.getElementById(fildId).style.border = "1px solid red";
-        }
-
-        //função que pinta a borda do campo que falta preencher
-        function reiniciaBorda(fildId) {
-            document.getElementById(fildId).style.border = "none";
-        }
-
-
-        //literal templete: é a crase
-        /*console.log(`
-        Nome: ${nome} ${sobrenome} |
-        Email: ${email} |
-        Telefone: ${digito} ${DDD} ${telefone} |
-        Endereço:  ${Cep} ${enderco} ${numeroCasa} ${local} ${bairro} ${cidade} ${estado} |
-        Anotações: ${anotacoes} |`)*/
-    </script>
+    <script src="js/script.js"></script>    
 </body>
 
 </html>

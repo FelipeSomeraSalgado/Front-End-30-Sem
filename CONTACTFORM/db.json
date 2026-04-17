@@ -1,0 +1,81 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "contatos": [
+    {
+      "nome": "Rafael",
+      "sobrenome": "Moura",
+      "email": "rafael.moura@exemple.com",
+      "id": "csE_5OqQLWM"
+    },
+    {
+      "nome": "Felipe",
+      "sobrenome": "Somera",
+      "email": "felipe.somera@exemple.com",
+      "id": "M8fi2-9AUgg"
+    },
+    {
+      "nome": "Ivan",
+      "sobrenome": "Soares",
+      "email": "ivan.soares@exemple.com",
+      "id": "fYb5jaY7o7g"
+    },
+    {
+      "nome": "Cahue",
+      "sobrenome": "Oliveira",
+      "email": "cahue.oliveira@exemple.com",
+      "id": "RQc2xYV72_o"
+    },
+    {
+      "nome": "Ronaldo",
+      "sobrenome": "Vieira",
+      "email": "ronaldo.vieira@exemple.com",
+      "id": "V0EGCTOh7K8"
+    },
+    {
+      "nome": "Felipe",
+      "sobrenome": "Salgado",
+      "id": "Sjp9DOIwrxw"
+    }
+  ],
+  "produto": [
+    {
+      "nome": "Mouse",
+      "preco": 12.2,
+      "quantidade": 3,
+      "id": "csE_5OqQLWM"
+    },
+    {
+      "nome": "Pc",
+      "preco": 3500,
+      "quantidade": 7,
+      "id": "yQjl72r58dg"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
