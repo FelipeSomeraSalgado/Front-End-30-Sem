@@ -1,0 +1,21 @@
+{
+  "usuarios": [
+    {
+      "id": "2",
+      "nome": "Julio",
+      "email": "julCezar@julCezar.com",
+      "idade": 69
+    }
+  ],
+  "imc": [
+    {
+      "nome": "Cauhê",
+      "altura": 1.77,
+      "peso": 78,
+      "IMC": 24.897060231734173,
+      "textoSituacao": "Saudável",
+      "id": "LMKlMkYmmSs"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

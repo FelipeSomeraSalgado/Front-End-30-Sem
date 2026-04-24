@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .corsim{
+            color: rgba(24, 27, 25, 0.548);
+        }
+        .cornao{
+            color: rgb(168, 38, 38);
+        }
+    </style>
+</head>
+<body>
+    <input type="text" onblur="getElement(this.value);" placeholder="digite o nome da classe">
+
+    <button onclick="getElement();">Pegar Elementos</button>
+    <ul>
+        <li class="corsim">Item 1</li>
+        <li class="cornao">Item 2</li>
+        <li class="corsim">Item 3</li>
+        <li class="cornao">Item 4</li>
+        <!--li.teste{Novo Item $}*4-->
+        <li class="teste">Novo Item 1</li>
+        <li class="teste">Novo Item 2</li>
+        <li class="teste">Novo Item 3</li>
+        <li class="teste">Novo Item 4</li>
+    </ul>
+    <script>
+        function getElement(nomeClasse = "cornao") {
+            //retorna todos os elementos com a className "cornao"
+            cornoes = document.getElementsByClassName(nomeClasse);
+
+            //console.log(cornoes);
+            //console.log(cornoes[0]);
+            //console.log(cornoes[0].textContent);
+
+            for (let i = 0; i < cornoes.length; i++) {
+               console.log(cornoes[i].textContent);  
+          
+            }
+        }
+    </script>
+</body>
+</html>

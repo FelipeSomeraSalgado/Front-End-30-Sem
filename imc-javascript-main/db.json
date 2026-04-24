@@ -1,0 +1,45 @@
+{
+  "imc": [
+    {
+      "nome": "Joao",
+      "altura": 1.77,
+      "peso": 85,
+      "IMC": 27.13141179099237,
+      "textoSituacao": "Sobrepeso",
+      "id": "CZFybV6chUk"
+    },
+    {
+      "nome": "Felipe Gomes",
+      "altura": 1.69,
+      "peso": 339,
+      "IMC": 248.06796037644858,
+      "textoSituacao": "Obseidade Grau III (considerado mórbida)",
+      "id": "YhIQDlOGqh0"
+    },
+    {
+      "nome": "Cauhê",
+      "altura": 1.77,
+      "peso": 78,
+      "IMC": 24.897060231734173,
+      "textoSituacao": "Saudável",
+      "id": "afZvRkC1YAg"
+    },
+    {
+      "nome": "Marcos",
+      "altura": 1.78,
+      "peso": 80,
+      "IMC": 25.24933720489837,
+      "textoSituacao": "Sobrepeso",
+      "id": "yEYQNFA7JO0"
+    },
+    {
+      "nome": "Barney",
+      "altura": 1.8,
+      "peso": 1000,
+      "IMC": 308.641975308642,
+      "textoSituacao": "Obseidade Grau III (considerado mórbida)",
+      "id": "xtm2kEG3qrM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

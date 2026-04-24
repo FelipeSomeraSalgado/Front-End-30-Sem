@@ -21,6 +21,11 @@
       "id": "2",
       "text": "another comment about post 1",
       "postId": "1"
+    },
+    {
+      "id": "3",
+      "text": "another comment about post 1",
+      "postId": "1"
     }
   ],
   "profile": {
