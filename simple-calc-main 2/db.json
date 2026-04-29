@@ -6,6 +6,48 @@
       "op": "soma",
       "resultado": "40.00",
       "id": "DGvE6PQMWLU"
+    },
+    {
+      "n1": 30,
+      "n2": 20,
+      "op": "soma",
+      "resultado": "50.00",
+      "id": "VD64crYlphs"
+    },
+    {
+      "n1": 20,
+      "n2": 30,
+      "op": "soma",
+      "resultado": "50.00",
+      "id": "9sozc_be2nw"
+    },
+    {
+      "n1": 70,
+      "n2": 90,
+      "op": "multiplicacao",
+      "resultado": "6300.00",
+      "id": "uivfxjm39T8"
+    },
+    {
+      "n1": 40,
+      "n2": 50,
+      "op": "divisao",
+      "resultado": "0.80",
+      "id": "hR1Z_t54EyM"
+    },
+    {
+      "n1": 10,
+      "n2": 30,
+      "op": "subtracao",
+      "resultado": "-20.00",
+      "id": "Tx9g9wxwgNw"
+    },
+    {
+      "n1": 20,
+      "n2": 20,
+      "op": "soma",
+      "resultado": "40.00",
+      "id": "NPq3_VoEdm4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
