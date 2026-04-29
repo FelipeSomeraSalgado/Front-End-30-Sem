@@ -1,25 +1,11 @@
 {
   "Calc": [
     {
-      "n1": 30,
-      "n2": 40,
+      "n1": 20,
+      "n2": 20,
       "op": "soma",
-      "resultado": "70.00",
-      "id": "rIRV7dvHSHk"
-    },
-    {
-      "n1": 5,
-      "n2": 5,
-      "op": "multiplicacao",
-      "resultado": "25.00",
-      "id": "uTHYexL8VPI"
-    },
-    {
-      "n1": 30,
-      "n2": 37,
-      "op": "soma",
-      "resultado": "67.00",
-      "id": "ousuvpobWks"
+      "resultado": "40.00",
+      "id": "DGvE6PQMWLU"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

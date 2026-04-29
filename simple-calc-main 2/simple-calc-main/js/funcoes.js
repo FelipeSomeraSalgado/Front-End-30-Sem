@@ -8,8 +8,8 @@ function calcular() {
     
     if( isNaN(n1) || isNaN(n2) ){
         document.getElementById('resultado').innerText = 'Preencha todos os números!'
+        return; // 👈 adicionado pra parar aqui
     }
-
 
     //processamento
     if(op == 'soma'){
@@ -38,22 +38,16 @@ function calcular() {
     }
 
     //saída
-    // console.log(`Resultado da operação: ${resultado}`);
     document.getElementById('resultado').innerHTML = resultado;
 
-    console.log(n1);
-    console.log(n2);
-    console.log(op);
-    console.log(resultado);
-
-        const objetoConta = {
-            n1: n1,
-            n2: n2,
-            op: op,
-            resultado: resultado
+    const objetoConta = {
+        n1: n1,
+        n2: n2,
+        op: op,
+        resultado: resultado
     };
 
-    const retorno = cadastrarNaApi(objetoConta);
+    cadastrarNaApi(objetoConta);
 
     const tabela = document.getElementById("cadastro");
 
@@ -72,18 +66,12 @@ function calcular() {
     } else {
         alert("Não foi possível fazer a conta");
     }
-
-
 }
 
-/**
- * Função somar recebe 2 valores e retorna a soma dos 
- * dois valores
- */
- function somar(valor1, valor2) {
+// funções
+function somar(valor1, valor2) {
     return valor1 + valor2;
 }
-
 
 function subtrair(valor1, valor2) {
     return valor1 - valor2;
@@ -97,11 +85,10 @@ function dividir(valor1, valor2) {
     if(valor2 == 0) {
         return 'Não é um número';
     }
-    
     return valor1 / valor2;
 }
 
-
+// salvar na API
 async function cadastrarNaApi(objetoConta) {
     try {
         const resposta = await fetch('http://localhost:3000/Calc', {
@@ -120,31 +107,30 @@ async function cadastrarNaApi(objetoConta) {
     }
 }
 
-  async function buscarCalc(){
+// buscar dados ao recarregar
+async function buscarCalc(){
     try {
-    const retorno = await fetch("http://localhost:3000/Calc");
-    const dados = await retorno.json();
+        const retorno = await fetch("http://localhost:3000/Calc");
+        const dados = await retorno.json();
 
-    console.log(dados);
+        const tabela = document.getElementById("cadastro"); // 👈 corrigido
+        tabela.innerHTML = ""; // 👈 limpa antes
 
-    const tabela = document.getElementById("cadastrar");
-
-    for(let i = 0; i < dados.length; i++){
-        tabela.innerHTML +=
-        `
-        <article class="data__card-result">
-            <span><strong>Primeiro Número:</strong> ${dados[i].n1}</span>
-            <span><strong>Segundo Número:</strong> ${dados[i].n2}</span>
-            <span><strong>Operação:</strong> ${dados[i].op}</span>
-            <span><strong>Resultado:</strong> ${dados[i].resultado}</span>
-        </article>
-        `;
-
-
-    }   
+        for(let i = 0; i < dados.length; i++){
+            tabela.innerHTML +=
+            `
+            <article class="data__card-result">
+                <span><strong>Primeiro Número:</strong> ${dados[i].n1}</span>
+                <span><strong>Segundo Número:</strong> ${dados[i].n2}</span>
+                <span><strong>Operação:</strong> ${dados[i].op}</span>
+                <span><strong>Resultado:</strong> ${dados[i].resultado}</span>
+            </article>
+            `;
+        }   
     } catch (error) {
-
-      console.log(error);
-
+        console.log(error);
     }
-  }
+}
+
+// 👇 ESSA LINHA resolve seu problema
+window.onload = buscarCalc;

@@ -39,6 +39,14 @@
       "IMC": 308.641975308642,
       "textoSituacao": "Obseidade Grau III (considerado mórbida)",
       "id": "xtm2kEG3qrM"
+    },
+    {
+      "nome": "zacaria",
+      "altura": 1.67,
+      "peso": 69,
+      "IMC": 24.740937287102444,
+      "textoSituacao": "Saudável",
+      "id": "amBjf4k24fo"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
