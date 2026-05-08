@@ -1,0 +1,18 @@
+.card-aluno{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+    width: 350px;
+    height: 200px;
+    margin-top: 10px;
+    border: black solid 1px;
+}
+
+.foto-Aluno{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #1A1A1A;
+}
