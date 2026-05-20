@@ -6,7 +6,7 @@
 
 body{
 
-    background: linear-gradient(to top, #000000, #3C0061);
+    background: linear-gradient(to top, #c7a494, #8a7064);
 }
 
 .cabecalho {
@@ -17,11 +17,11 @@ body{
 }
 
 .titulo--cinza {
-    color: black;
+    color: rgb(255, 255, 255);
 }
 
 .titulo--vermelho {
-    color: #6E00B3;
+    color: #db5651;
 }
 
 
@@ -63,7 +63,7 @@ body{
     width: 350px;
     height: 30%;
     background-color: transparent;
-    border: 2px solid black;
+    border: 2px solid #775f54;
     border-radius: 20px;
     cursor: pointer;
 }

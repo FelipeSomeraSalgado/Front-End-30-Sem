@@ -1,26 +1,12 @@
 {
   "produtos": [
     {
-      "id": "2",
-      "nome": "Produto 2",
-      "preco": 19.99,
-      "descricao": "Descrição do produto 2",
-      "quantidade": 3
-    },
-    {
-      "id": "3",
-      "nome": "Produto 3",
-      "preco": 5.99,
-      "descricao": "Descrição do produto 3",
-      "quantidade": 10
-    },
-    {
-      "nome": "wqd",
-      "preco": 33,
-      "descricao": "wv43g3",
-      "quantidade": 444,
-      "imagem": "",
-      "id": "HwY1-A4wAzo"
+      "nome": "Notebook 2",
+      "preco": 2500,
+      "descricao": "Muito bom para codar ",
+      "quantidade": 10,
+      "imagem": "image.jpg",
+      "id": "o3anIkDje2E"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
