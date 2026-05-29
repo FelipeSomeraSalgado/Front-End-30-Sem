@@ -4,6 +4,8 @@ import Footer from "../../components/footer/Footer";
 import Cadastro from "../../components/cadastro/Cadastro";
 import { Alerta } from "../../components/alerta/Alerta";
 import { useEffect, useState } from "react";
+import api from "../../Services/services";
+import Swal from "sweetalert2";
 import Lista from "../../components/lista/Lista";
 
 const CadastroFilmes = () => {
@@ -11,9 +13,7 @@ const CadastroFilmes = () => {
     const [valor, setValor] = useState("")
     const [editar, setEditar] = useState(false)
     const [listaFilmes, setListaFilmes] = useState([])
-    const [listaGeneros, setListaGeneros] = useState([
-        {idFilme}
-    ])
+    const [listaGeneros, setListaGeneros] = useState([])
 
     //Get
     const getGeneros = async () => {
@@ -57,7 +57,6 @@ const CadastroFilmes = () => {
 
         // Validar o formulário
         if (valor.trim().length == 0) {
-            // alert("Preencher o gênero");
 
             Alerta({
                 title: "Testeee",
@@ -192,8 +191,7 @@ const CadastroFilmes = () => {
         setId(0); // resetar o id
     };
 
-    //Funções
-
+    
     //Ciclo de vida
     useEffect(() => {
         getGeneros();
