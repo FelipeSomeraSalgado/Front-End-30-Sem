@@ -5,13 +5,19 @@ import { UsuarioContext } from "../../context/UsuarioContext"
 const Header = () => {
     const { usuario, setUsuario } = useContext(UsuarioContext)
 
+    const logout = () => {
+        setUsuario(null);
+        localStorage.removeItem("usuario");//apaga o usuário do localStorage
+    }
+
     return (
 
         <header>
             <nav>
-                <Link to={"/"}>Home</Link> {" "}
-                <Link to="/perfil">Pefil</Link>{" "}
-                <Link to="/myPage">My Blog</Link>{" "}
+                <Link to={"/"}>Home</Link> {" | "}
+                <Link to="/perfil">Pefil</Link>{" | "}
+                <Link to="/myPage">My Blog</Link>{" | "}
+                <Link to="/cdprodutos">Cadastrar Produtos</Link>{" | "}
                 <span>( {usuario} )</span>
                 <button
                     onClick={() => {
