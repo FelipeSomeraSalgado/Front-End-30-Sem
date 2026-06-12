@@ -1,35 +1,43 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import "./App.css";
-import Home from "./components/home/Home";
-import Perfil from "./components/perfil/Perfil";
-import MyPage from "./components/mypage/MyPage";
-import Header from "./components/header/Header";
-import PrivateRoute from "./components/routes/PrivateRoute";
-import CadastrarProduto from "./components/cadastrarproduto/CadastrarProduto";
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import './App.css'
+import Home from './components/home/Home'
+import Perfil from './components/perfil/Perfil'
+import MyPage from './components/mypage/Mypage'
+import Header from './components/header/Header'
+import CadastroProduto from './components/cadastroproduto/CadastrarProduto'
+import ListarProduto from './components/listarProduto/ListarProduto'
+import PrivateRoute from './components/routes/PrivateRoute'
 
 function App() {
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/perfil" element={<Perfil />} />
+    <BrowserRouter>
+      <Header />
 
-          <Route path="/myPage" element={
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/perfil' element={<Perfil />} />
+
+        <Route
+          path='/mypage'
+          element={
             <PrivateRoute>
-               <MyPage />{/* children*/}
+              <MyPage />
             </PrivateRoute>
-          } />
-          <Route path="/cdProduto" element={
+          }
+        />
+
+        <Route
+          path='/produto'
+          element={
             <PrivateRoute>
-              <CadastrarProduto />
+              <CadastroProduto />
+              <ListarProduto />
             </PrivateRoute>
-          }/>
-        </Routes>
-      </BrowserRouter>
-    </>
-  );
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App

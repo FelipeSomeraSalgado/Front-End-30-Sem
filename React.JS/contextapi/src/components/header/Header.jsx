@@ -3,29 +3,22 @@ import { Link } from "react-router-dom"
 import { UsuarioContext } from "../../context/UsuarioContext"
 
 const Header = () => {
-    const { usuario, setUsuario } = useContext(UsuarioContext)
-
-    const logout = () => {
-        setUsuario(null);
-        localStorage.removeItem("usuario");//apaga o usuário do localStorage
-    }
+    const {usuario, setUsuario} = useContext(UsuarioContext)
 
     return (
-
+        
         <header>
             <nav>
                 <Link to={"/"}>Home</Link> {" | "}
                 <Link to="/perfil">Pefil</Link>{" | "}
                 <Link to="/myPage">My Blog</Link>{" | "}
-                <Link to="/cdprodutos">Cadastrar Produtos</Link>{" | "}
+                <Link to="/cdProduto">Cadastrar Produto</Link>{" | "}
                 <span>( {usuario} )</span>
-                <button
-                    onClick={() => {
-                        setUsuario(null);
+                <button 
+                    onClick={()=>{
+                        setUsuario(null)
                     }}
-                >
-                    Sair
-                </button>
+                >Sair</button>
             </nav>
         </header>
     )
